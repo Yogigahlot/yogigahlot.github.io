@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>आर्यन शर्मा | पोर्टफोलियो</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F5FA;--surface:#FFFFFF;--ink:#16181F;--muted:#5B6275;--line:#DDE2EC;--accent:#3A3FD8;--accent-ink:#FFFFFF;--tint:#E6E8FB;
+--head:'Poppins','Hind',sans-serif;--body:'Hind','Poppins',sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141C;--surface:#1B1E29;--ink:#EEF0F6;--muted:#9AA1B5;--line:#2B2F3E;--accent:#8E93FF;--accent-ink:#12141C;--tint:#262A4A}}
+:root[data-theme="dark"]{--bg:#12141C;--surface:#1B1E29;--ink:#EEF0F6;--muted:#9AA1B5;--line:#2B2F3E;--accent:#8E93FF;--accent-ink:#12141C;--tint:#262A4A}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav b{font:700 18px var(--head)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--ink)}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:16px}
+.hero{padding:84px 0 70px}
+h1{font:700 clamp(40px,8vw,84px)/1.12 var(--head);margin:0 0 22px;letter-spacing:-.02em;max-width:14ch}
+h1 span{color:var(--accent)}
+.hero p{font-size:20px;color:var(--muted);max-width:46ch;margin:0 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font:600 16px var(--head);text-decoration:none;border:1.5px solid var(--ink)}
+.btn.main{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .2s}
+.status{display:inline-flex;gap:10px;align-items:center;margin-bottom:26px;padding:7px 16px;border-radius:999px;background:var(--tint);font-size:15px;font-weight:500}
+.dot{width:9px;height:9px;border-radius:50%;background:#1FA463;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font:600 clamp(28px,4.5vw,40px)/1.2 var(--head);margin:0 0 34px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;grid-column:span 2}
+.card.big{grid-column:span 4}
+.shot{height:170px;position:relative}
+.big .shot{height:230px}
+.s1{background:linear-gradient(135deg,#3A3FD8,#7C80FF)}
+.s2{background:linear-gradient(135deg,#0E7C86,#5CD1C2)}
+.s3{background:linear-gradient(135deg,#C2410C,#F6A56B)}
+.s4{background:linear-gradient(135deg,#1F2937,#4B5D78)}
+.s5{background:linear-gradient(135deg,#9D174D,#F08AB5)}
+.shot::after{content:"";position:absolute;left:18px;right:18px;bottom:0;height:62%;background:rgba(255,255,255,.92);border-radius:10px 10px 0 0;box-shadow:0 -8px 0 -4px rgba(255,255,255,.4)}
+.card div.t{padding:20px 22px 24px}
+.card h3{font:600 19px var(--head);margin:0 0 6px}
+.card p{margin:0 0 14px;color:var(--muted);font-size:16px;line-height:1.6}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tags i{font-style:normal;font-size:14px;padding:2px 12px;border-radius:999px;background:var(--tint)}
+.about{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start}
+.photo{aspect-ratio:1;border-radius:24px;background:linear-gradient(160deg,var(--accent),#0E7C86);display:grid;place-items:center;font:700 72px var(--head);color:#fff}
+.skills{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.skills span{border:1px solid var(--line);background:var(--surface);padding:5px 16px;border-radius:999px;font-weight:500}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:28px}
+.tl div{position:relative;padding-bottom:30px}
+.tl div::before{content:"";position:absolute;left:-36px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.tl b{font:600 18px var(--head)}
+.tl small{display:block;color:var(--muted);font-size:15px}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+blockquote{margin:0;padding:24px;background:var(--surface);border:1px solid var(--line);border-radius:18px}
+blockquote footer{margin-top:12px;color:var(--muted);font-size:15px}
+form{display:grid;gap:14px;max-width:520px}
+input,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:13px 16px;width:100%}
+textarea{min-height:120px;resize:vertical}
+button.btn{cursor:pointer;justify-self:start;background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.links{display:flex;gap:20px;flex-wrap:wrap;margin:0 0 26px}
+footer.end{padding:30px 0 40px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+#ok{display:none;color:#1FA463;font-weight:500}
+@media (max-width:760px){
+nav ul li.hide{display:none}
+.card,.card.big{grid-column:span 6}
+.about{grid-template-columns:1fr}.photo{max-width:180px;font-size:56px}
+.hero{padding:56px 0 48px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>आर्यन</b>
+<ul><li class="hide"><a href="#kaam">काम</a></li><li class="hide"><a href="#parichay">परिचय</a></li><li class="hide"><a href="#safar">सफ़र</a></li><li><a href="#sampark">संपर्क</a></li><li><button id="theme" aria-label="थीम बदलें">◐</button></li></ul></div></nav>
+
+<main class="wrap">
+<header class="hero">
+<div class="status"><span class="dot"></span>नए प्रोजेक्ट्स के लिए उपलब्ध</div>
+<h1>मैं आर्यन हूँ, वेबसाइट और ऐप्स <span>बनाता</span> हूँ।</h1>
+<p>तेज़, सरल और इस्तेमाल में आसान प्रोडक्ट्स, जिन्हें लोग सचमुच पसंद करें। पिछले 4 साल में 30 से ज़्यादा प्रोजेक्ट्स डिलीवर किए हैं।</p>
+<div class="btns"><a class="btn main" href="#kaam">मेरा काम देखें</a><a class="btn" href="#sampark">संपर्क करें</a></div>
+</header>
+
+<section id="kaam">
+<h2>चुने हुए प्रोजेक्ट्स</h2>
+<div class="grid">
+<article class="card big"><div class="shot s1"></div><div class="t"><h3>किसान मंडी ऐप</h3><p>किसानों को आसपास की मंडियों के ताज़ा भाव एक टैप में दिखाने वाला ऐप। 50 हज़ार से ज़्यादा डाउनलोड।</p><div class="tags"><i>React Native</i><i>Firebase</i></div></div></article>
+<article class="card"><div class="shot s2"></div><div class="t"><h3>खर्चा डायरी</h3><p>रोज़ का हिसाब रखने वाला हल्का वेब ऐप।</p><div class="tags"><i>Next.js</i><i>Tailwind</i></div></div></article>
+<article class="card"><div class="shot s3"></div><div class="t"><h3>स्वाद रेस्टोरेंट</h3><p>ऑनलाइन मेन्यू और टेबल बुकिंग वाली साइट।</p><div class="tags"><i>HTML</i><i>Node.js</i></div></div></article>
+<article class="card"><div class="shot s4"></div><div class="t"><h3>कोड कैलेंडर</h3><p>डेवलपर्स के लिए रोज़ की कोडिंग आदत ट्रैकर।</p><div class="tags"><i>TypeScript</i><i>Supabase</i></div></div></article>
+<article class="card"><div class="shot s5"></div><div class="t"><h3>शादी निमंत्रण</h3><p>RSVP और लोकेशन के साथ डिजिटल कार्ड।</p><div class="tags"><i>Vue</i><i>CSS</i></div></div></article>
+</div>
+</section>
+
+<section id="parichay">
+<h2>मेरे बारे में</h2>
+<div class="about"><div class="photo" aria-hidden="true">आ</div>
+<div><p>मैं जयपुर में रहता हूँ और फ़्रंटएंड डेवलपर के तौर पर काम करता हूँ। मुझे जटिल चीज़ों को सरल बनाना पसंद है, चाहे वह कोड हो या डिज़ाइन। खाली समय में मैं फ़ोटोग्राफ़ी करता हूँ और ओपन-सोर्स में योगदान देता हूँ।</p>
+<div class="skills"><span>HTML/CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Figma</span><span>SEO</span></div></div></div>
+</section>
+
+<section id="safar">
+<h2>अनुभव और पढ़ाई</h2>
+<div class="tl">
+<div><b>सीनियर फ़्रंटएंड डेवलपर, पिक्सेल स्टूडियो</b><small>2024 से अब तक</small>टीम का नेतृत्व और डिज़ाइन सिस्टम तैयार किया।</div>
+<div><b>वेब डेवलपर, डिजिटल भारत सॉल्यूशंस</b><small>2022 से 2024</small>20 से ज़्यादा क्लाइंट वेबसाइट्स लॉन्च कीं।</div>
+<div><b>बी.टेक, कंप्यूटर साइंस</b><small>2018 से 2022</small>राजस्थान तकनीकी विश्वविद्यालय।</div>
+</div>
+</section>
+
+<section>
+<h2>क्लाइंट्स क्या कहते हैं</h2>
+<div class="quotes">
+<blockquote>आर्यन ने तय समय से पहले हमारी साइट तैयार कर दी, और बिक्री पहले महीने में ही दोगुनी हो गई।<footer>रीना गुप्ता, स्वाद रेस्टोरेंट</footer></blockquote>
+<blockquote>बात समझने में तेज़, काम में साफ़। दोबारा ज़रूर काम करेंगे।<footer>अमित वर्मा, खर्चा डायरी</footer></blockquote>
+</div>
+</section>
+
+<section id="sampark">
+<h2>आइए, साथ में कुछ बनाएँ</h2>
+<div class="links"><a href="mailto:aryan@example.com">aryan@example.com</a><a href="#">LinkedIn</a><a href="#">GitHub</a></div>
+<form id="f"><input aria-label="आपका नाम" placeholder="आपका नाम" required><input type="email" aria-label="ईमेल" placeholder="ईमेल" required><textarea aria-label="संदेश" placeholder="आप क्या बनवाना चाहते हैं?" required></textarea>
+<button class="btn" type="submit">संदेश भेजें</button><span id="ok">संदेश भेज दिया गया। मैं जल्द जवाब दूँगा।</span></form>
+</section>
+</main>
+<footer class="end"><div class="wrap">© 2026 आर्यन शर्मा</div></footer>
+
+<script>
+(function(){
+var r=document.documentElement,b=document.getElementById('theme');
+b.addEventListener('click',function(){
+var dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+r.dataset.theme=dark?'light':'dark';});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').style.display='inline';this.reset();});
+})();
+</script>
+</body>
+</html>
